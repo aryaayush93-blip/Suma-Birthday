@@ -5410,3 +5410,17 @@ body {
         animation: none;
     }
 }
+.photo-memory .smile-photo {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 2px;
+}
+
+@media (max-width: 480px) {
+    .photo-memory .smile-photo {
+        height: 180px;
+    }
+}
