@@ -1285,10 +1285,7 @@
                 Ek chhoti si duniya...
                 sirf aapke liye ❤️
             </p>
-            <button id="playBirthdayTune" class="main-button" type="button">
-    🎵 Play Happy Birthday Tune
-                <audio id="birthdayJingle" src="suma_gingle.mp3" preload="metadata"></audio>
-</button>
+            
         </div>
 
         <div id="palaceGate" class="palace">
@@ -1390,6 +1387,7 @@
                 <br>
                 aur phir candles ko touch karo. ✨
             </p>
+            <audio id="birthdayJingle" src="suma_gingle.mp3" preload="metadata"></audio>
 
             <!-- Cake -->
 
@@ -1691,6 +1689,9 @@
             }
 
             candlesBlown = true;
+            document.getElementById("birthdayJingle").play().catch(function (error) {
+    console.error("Birthday jingle could not play:", error);
+});
 
             document.getElementById("candles").classList.add("blown");
 
