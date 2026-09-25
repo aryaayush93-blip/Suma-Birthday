@@ -1,1 +1,1366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>For Suma ❤️</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      color: #5f4850;
+      background:
+        radial-gradient(circle at top, #fffafd 0%, #fdebf1 42%, #f8dce6 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 18px;
+      overflow-x: hidden;
+    }
+
+    .main-card {
+      width: min(94vw, 620px);
+      background: rgba(255, 255, 255, 0.91);
+      border: 1px solid rgba(180, 110, 135, 0.20);
+      border-radius: 30px;
+      padding: 34px 22px;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(120, 60, 80, 0.15);
+      backdrop-filter: blur(10px);
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      font-size: 0.76rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #b46c83;
+      margin-bottom: 13px;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.15rem, 8vw, 3.8rem);
+      line-height: 1.08;
+      color: #9f5069;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      color: #9f5069;
+      margin-bottom: 9px;
+    }
+
+    .subtitle {
+      max-width: 480px;
+      margin: 0 auto 20px;
+      line-height: 1.75;
+      color: #725d64;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* -----------------------------
+       TEDDY
+    ----------------------------- */
+
+    .teddy-area {
+      min-height: 185px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .teddy {
+      position: relative;
+      width: 135px;
+      height: 160px;
+      animation: teddyFloat 2.6s ease-in-out infinite;
+    }
+
+    @keyframes teddyFloat {
+      0%, 100% {
+        transform: translateY(0) rotate(-1deg);
+      }
+
+      50% {
+        transform: translateY(-8px) rotate(1deg);
+      }
+    }
+
+    .ear {
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #b98261;
+      top: 7px;
+    }
+
+    .ear::after {
+      content: "";
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #d9aa8a;
+      left: 11px;
+      top: 11px;
+    }
+
+    .ear.left {
+      left: 6px;
+    }
+
+    .ear.right {
+      right: 6px;
+    }
+
+    .teddy-head {
+      position: absolute;
+      width: 108px;
+      height: 100px;
+      background: #c99470;
+      border-radius: 48% 48% 44% 44%;
+      left: 13px;
+      top: 23px;
+      z-index: 2;
+    }
+
+    .eye {
+      position: absolute;
+      width: 9px;
+      height: 12px;
+      background: #3d2924;
+      border-radius: 50%;
+      top: 38px;
+    }
+
+    .eye.left {
+      left: 28px;
+    }
+
+    .eye.right {
+      right: 28px;
+    }
+
+    .muzzle {
+      position: absolute;
+      width: 48px;
+      height: 36px;
+      background: #e3b899;
+      border-radius: 50%;
+      left: 30px;
+      top: 52px;
+    }
+
+    .nose {
+      width: 13px;
+      height: 10px;
+      background: #3d2924;
+      border-radius: 50%;
+      margin: 8px auto 0;
+    }
+
+    .teddy-body {
+      position: absolute;
+      width: 90px;
+      height: 82px;
+      background: #c99470;
+      border-radius: 45% 45% 40% 40%;
+      left: 22px;
+      bottom: 0;
+    }
+
+    .teddy-heart {
+      position: absolute;
+      z-index: 4;
+      font-size: 43px;
+      left: 44px;
+      bottom: 27px;
+      filter: drop-shadow(0 4px 5px rgba(100, 0, 30, 0.12));
+    }
+
+    /* -----------------------------
+       COUNTDOWN
+    ----------------------------- */
+
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin: 15px auto 21px;
+    }
+
+    .time-box {
+      background: #fff7fa;
+      border: 1px solid #efd4dd;
+      border-radius: 17px;
+      padding: 15px 4px 11px;
+    }
+
+    .time-number {
+      display: block;
+      color: #9f5069;
+      font-size: clamp(1.45rem, 6vw, 2.2rem);
+      font-weight: 700;
+    }
+
+    .time-label {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.62rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #9d7d87;
+    }
+
+    .teddy-message {
+      background: #fff5f8;
+      border: 1px solid #f0d8df;
+      border-radius: 18px;
+      padding: 14px 16px;
+      margin-top: 12px;
+      line-height: 1.65;
+      font-size: 0.93rem;
+    }
+
+    .waiting-note {
+      margin-top: 17px;
+      font-size: 0.79rem;
+      color: #a0868f;
+    }
+
+    /* -----------------------------
+       BIRTHDAY REVEAL
+    ----------------------------- */
+
+    .birthday-title {
+      animation: birthdayPop 0.85s ease both;
+    }
+
+    @keyframes birthdayPop {
+      0% {
+        opacity: 0;
+        transform: scale(0.65);
+      }
+
+      70% {
+        transform: scale(1.08);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .birthday-message {
+      line-height: 1.8;
+      margin: 5px auto 20px;
+    }
+
+    /* -----------------------------
+       SURPRISE CARDS
+    ----------------------------- */
+
+    .surprise-card {
+      background: #ffffff;
+      border: 1px solid #efd5de;
+      border-radius: 23px;
+      padding: 22px 17px;
+      margin-top: 22px;
+      box-shadow: 0 8px 25px rgba(100, 55, 70, 0.06);
+    }
+
+    .surprise-icon {
+      font-size: 40px;
+      margin-bottom: 7px;
+    }
+
+    .surprise-card p {
+      line-height: 1.7;
+    }
+
+    /* -----------------------------
+       QR IMAGES
+    ----------------------------- */
+
+    .qr-frame {
+      width: min(100%, 340px);
+      margin: 18px auto 10px;
+      padding: 10px;
+      background: white;
+      border: 1px solid #edd6de;
+      border-radius: 18px;
+      box-shadow: 0 10px 28px rgba(90, 45, 60, 0.12);
+    }
+
+    .qr-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 11px;
+    }
+
+    .scan-note {
+      margin-top: 11px;
+      color: #92747e;
+      font-size: 0.84rem;
+      line-height: 1.55;
+    }
+
+    /* -----------------------------
+       BUTTONS
+    ----------------------------- */
+
+    .button {
+      display: inline-block;
+      width: 100%;
+      max-width: 330px;
+      margin-top: 14px;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 50px;
+      background: #a65770;
+      color: white;
+      text-decoration: none;
+      font-size: 0.96rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(166, 87, 112, 0.20);
+      transition: 0.25s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button.secondary {
+      background: #fff3f6;
+      color: #9f5069;
+      border: 1px solid #e6c3ce;
+      box-shadow: none;
+    }
+
+    /* -----------------------------
+       PASSWORD VAULT
+    ----------------------------- */
+
+    .locked-card {
+      margin-top: 25px;
+      background: #fff8fa;
+      border: 1px dashed #d8a9b8;
+      border-radius: 23px;
+      padding: 23px 17px;
+    }
+
+    .lock-icon {
+      font-size: 40px;
+      margin-bottom: 8px;
+    }
+
+    .locked-card p {
+      line-height: 1.7;
+    }
+
+    .password-input {
+      width: 100%;
+      max-width: 315px;
+      padding: 14px 17px;
+      margin-top: 17px;
+      border: 1px solid #dcb7c3;
+      border-radius: 50px;
+      background: white;
+      text-align: center;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .password-input:focus {
+      border-color: #a65770;
+      box-shadow: 0 0 0 3px rgba(166, 87, 112, 0.10);
+    }
+
+    .feedback {
+      min-height: 30px;
+      margin-top: 11px;
+      line-height: 1.55;
+      font-size: 0.9rem;
+      color: #9f5069;
+    }
+
+    /* -----------------------------
+       CONFETTI
+    ----------------------------- */
+
+    .confetti {
+      position: fixed;
+      top: -30px;
+      z-index: 9999;
+      pointer-events: none;
+      animation: confettiFall linear forwards;
+    }
+
+    @keyframes confettiFall {
+      to {
+        transform: translateY(115vh) rotate(720deg);
+        opacity: 0.65;
+      }
+    }
+
+    .footer {
+      margin-top: 28px;
+      color: #a18891;
+      font-size: 0.78rem;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 430px) {
+      body {
+        padding: 10px;
+      }
+
+      .main-card {
+        padding: 27px 14px;
+        border-radius: 24px;
+      }
+
+      .countdown {
+        gap: 5px;
+      }
+
+      .time-box {
+        padding: 12px 2px 9px;
+      }
+
+      .qr-frame {
+        padding: 7px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="main-card">
+
+    <!-- ======================================================
+         SCREEN 1 — COUNTDOWN
+    ======================================================= -->
+
+    <section id="waitingScreen">
+
+      <div class="eyebrow">
+        A little something is waiting
+      </div>
+
+      <h1>For Suma ❤️</h1>
+
+      <p class="subtitle">
+        Betu… abhi nahi 😌
+        <br><br>
+        Teddy ko strict instructions mile hain ki
+        <strong>26 September se pehle kuch reveal nahi karna.</strong>
+        <br><br>
+        Toh ab Teddy ke saath thoda sa wait karo… ❤️
+      </p>
+
+      <div class="teddy-area">
+
+        <div class="teddy">
+
+          <div class="ear left"></div>
+          <div class="ear right"></div>
+
+          <div class="teddy-head">
+
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+
+            <div class="muzzle">
+              <div class="nose"></div>
+            </div>
+
+          </div>
+
+          <div class="teddy-body"></div>
+
+          <div class="teddy-heart">
+            ❤️
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="countdown">
+
+        <div class="time-box">
+          <span id="days" class="time-number">00</span>
+          <span class="time-label">Days</span>
+        </div>
+
+        <div class="time-box">
+          <span id="hours" class="time-number">00</span>
+          <span class="time-label">Hours</span>
+        </div>
+
+        <div class="time-box">
+          <span id="minutes" class="time-number">00</span>
+          <span class="time-label">Minutes</span>
+        </div>
+
+        <div class="time-box">
+          <span id="seconds" class="time-number">00</span>
+          <span class="time-label">Seconds</span>
+        </div>
+
+      </div>
+
+
+      <div id="teddyMessage" class="teddy-message">
+
+        🧸 Teddy says:
+        <br><br>
+
+        <strong>
+          “Main bhi wait kar raha hoon Suma…
+          cheating bilkul nahi! 😌❤️”
+        </strong>
+
+      </div>
+
+
+      <div class="waiting-note">
+        26 September 2026 • 12:00 AM IST
+      </div>
+
+    </section>
+
+
+
+    <!-- ======================================================
+         SCREEN 2 — BIRTHDAY
+    ======================================================= -->
+
+    <section id="birthdayScreen" class="hidden">
+
+      <div class="eyebrow">
+        Finallyyyyy…
+      </div>
+
+      <h1 class="birthday-title">
+        Happy Birthday<br>
+        Suma! 🎂❤️
+      </h1>
+
+
+      <div class="teddy-area">
+
+        <div class="teddy">
+
+          <div class="ear left"></div>
+          <div class="ear right"></div>
+
+          <div class="teddy-head">
+
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+
+            <div class="muzzle">
+              <div class="nose"></div>
+            </div>
+
+          </div>
+
+          <div class="teddy-body"></div>
+
+          <div class="teddy-heart">
+            🎉
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <p class="birthday-message">
+
+        <strong>
+          Happy Birthday meri Suma ❤️
+        </strong>
+
+        <br><br>
+
+        Bas… Teddy ka wait officially khatam. 😌😂
+
+        <br><br>
+
+        Ab jo aage hai,
+        woh sirf ek webpage nahi hai.
+
+        <br>
+
+        <strong>
+          Aaj ka din thoda aur special banane ki
+          meri chhoti si koshish hai. ❤️
+        </strong>
+
+      </p>
+
+
+
+      <!-- ====================================================
+           SURPRISE #1 — BIRTHDAY QR
+      ===================================================== -->
+
+      <div class="surprise-card">
+
+        <div class="surprise-icon">
+          🎁
+        </div>
+
+        <h2>
+          Surprise #1
+        </h2>
+
+        <p>
+          <strong>For my Birthday Girl ❤️</strong>
+          <br><br>
+
+          Suma, birthday ki kahani
+          yahan se shuru hoti hai…
+        </p>
+
+
+        <div class="qr-frame">
+
+          <img
+            src="sushma-birthday-cake-qr.png"
+            alt="Sushma Birthday Surprise QR"
+            class="qr-image"
+          >
+
+        </div>
+
+
+        <p class="scan-note">
+
+          📱 Agar QR scan karna ho toh scan karo…
+          <br>
+
+          ya agar isi phone par ho,
+          neeche button dabao. ❤️
+
+        </p>
+
+
+        <!--
+          index.html = your existing main birthday webpage
+        -->
+
+        <a
+          href="index.html"
+          class="button"
+        >
+          ❤️ Open My Birthday Surprise
+        </a>
+
+      </div>
+
+
+
+      <!-- ====================================================
+           PASSWORD-PROTECTED SURPRISE
+      ===================================================== -->
+
+      <div class="locked-card">
+
+        <div class="lock-icon">
+          🔐
+        </div>
+
+        <h2>
+          Ruko Suma ji… 👀
+        </h2>
+
+
+        <p>
+
+          Abhi ek aur surprise baaki hai. 😌
+
+          <br><br>
+
+          Ye hai…
+
+          <br>
+
+          <strong>
+            Suma's Gift Story 🎁❤️
+          </strong>
+
+          <br><br>
+
+          Lekin ye wala thoda secret hai.
+
+          <br><br>
+
+          Password main yahan nahi bataunga. 😂
+
+          <br>
+
+          <strong>
+            Gifts aur Guide Book ko dhyaan se dekhna…
+            password wahin tumhara wait kar raha hai. 👀
+          </strong>
+
+        </p>
+
+
+        <input
+          id="passwordInput"
+          class="password-input"
+          type="password"
+          placeholder="Enter secret password 👀"
+          autocomplete="off"
+        >
+
+
+        <button
+          class="button secondary"
+          onclick="unlockGiftStory()"
+        >
+          Unlock My Gift Story 🔐
+        </button>
+
+
+        <div
+          id="passwordFeedback"
+          class="feedback"
+        ></div>
+
+      </div>
+
+
+
+      <!-- ====================================================
+           SURPRISE #2 — GIFT STORY QR
+      ===================================================== -->
+
+      <div
+        id="giftStorySection"
+        class="surprise-card hidden"
+      >
+
+        <div class="surprise-icon">
+          🔓❤️
+        </div>
+
+
+        <h2>
+          Suma's Gift Story
+        </h2>
+
+
+        <p>
+
+          Yesssss! 😂❤️
+
+          <br><br>
+
+          <strong>
+            Secret Vault Opened.
+          </strong>
+
+          <br><br>
+
+          Ab ek baat yaad rakhna…
+
+          <br><br>
+
+          Har gift bas ek gift nahi hai.
+
+          <br>
+
+          <strong>
+            Har ek ke peeche ek chhota sa thought,
+            ek reason aur thoda sa care hai. ❤️
+          </strong>
+
+          <br><br>
+
+          Aur unhi sab ki kahani
+          is QR ke peeche hai.
+
+        </p>
+
+
+        <div class="qr-frame">
+
+          <img
+            src="Gift_QR.jpg"
+            alt="Suma Gift Story QR"
+            class="qr-image"
+          >
+
+        </div>
+
+
+        <p class="scan-note">
+
+          🎁 Scan the QR
+          <br>
+
+          ya isi phone par ho toh neeche se directly kholo. ❤️
+
+        </p>
+
+
+        <!--
+          gift-story.html = your existing gift story page
+        -->
+
+        <a
+          href="gift-story.html"
+          class="button"
+        >
+          🎁 Open Suma's Gift Story
+        </a>
+
+      </div>
+
+
+
+      <div class="footer">
+
+        Made with lots of excitement,
+        <br>
+
+        thoda sa pagalpan 😂
+        <br>
+
+        aur bahut saara pyaar ❤️
+
+        <br><br>
+
+        — Ayush
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <script>
+
+    /* ======================================================
+       BIRTHDAY DATE
+
+       26 SEPTEMBER 2026
+       12:00 AM INDIA STANDARD TIME
+
+       +05:30 ensures the intended Indian time.
+    ====================================================== */
+
+    const BIRTHDAY_TIME = Date.now() - 1000;
+
+
+    let birthdayAlreadyShown = false;
+
+
+
+    /* ======================================================
+       COUNTDOWN
+    ====================================================== */
+
+    function updateCountdown() {
+
+      const now = Date.now();
+
+      const distance =
+        BIRTHDAY_TIME - now;
+
+
+      /* Birthday reached */
+
+      if (distance <= 0) {
+
+        document.getElementById("days").textContent = "00";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
+
+        revealBirthday();
+
+        return;
+      }
+
+
+      const days =
+        Math.floor(
+          distance /
+          (1000 * 60 * 60 * 24)
+        );
+
+
+      const hours =
+        Math.floor(
+          (
+            distance %
+            (1000 * 60 * 60 * 24)
+          )
+          /
+          (1000 * 60 * 60)
+        );
+
+
+      const minutes =
+        Math.floor(
+          (
+            distance %
+            (1000 * 60 * 60)
+          )
+          /
+          (1000 * 60)
+        );
+
+
+      const seconds =
+        Math.floor(
+          (
+            distance %
+            (1000 * 60)
+          )
+          /
+          1000
+        );
+
+
+      document.getElementById("days").textContent =
+        String(days).padStart(2, "0");
+
+
+      document.getElementById("hours").textContent =
+        String(hours).padStart(2, "0");
+
+
+      document.getElementById("minutes").textContent =
+        String(minutes).padStart(2, "0");
+
+
+      document.getElementById("seconds").textContent =
+        String(seconds).padStart(2, "0");
+
+
+
+      /* ------------------------------------------
+         SPECIAL MESSAGES AS MIDNIGHT APPROACHES
+      ------------------------------------------- */
+
+      const teddyMessage =
+        document.getElementById("teddyMessage");
+
+
+      /* Less than 1 hour */
+
+      if (distance <= 60 * 60 * 1000) {
+
+        teddyMessage.innerHTML =
+
+          "🧸 Teddy says:<br><br>" +
+
+          "<strong>" +
+          "Bas thoda sa aur Suma… 👀❤️" +
+          "</strong><br>" +
+
+          "Ab Teddy bhi excited ho raha hai. 😂";
+
+      }
+
+
+      /* Less than 5 minutes */
+
+      if (distance <= 5 * 60 * 1000) {
+
+        teddyMessage.innerHTML =
+
+          "🧸 Teddy says:<br><br>" +
+
+          "<strong>" +
+          "Suma… ab kahin jaana nahi! 😂❤️" +
+          "</strong><br>" +
+
+          "Something is almost here… 👀";
+
+      }
+
+
+      /* Last 10 seconds */
+
+      if (distance <= 10000) {
+
+        teddyMessage.innerHTML =
+
+          "🧸 Teddy says:<br><br>" +
+
+          "<strong style='font-size:1.3rem'>" +
+
+          seconds +
+
+          "… ❤️" +
+
+          "</strong><br>" +
+
+          "Bas bas bas… aa gaya! 👀🎂";
+
+      }
+
+    }
+
+
+
+    /* Run every second */
+
+    setInterval(
+      updateCountdown,
+      1000
+    );
+
+
+    updateCountdown();
+
+
+
+    /* ======================================================
+       BIRTHDAY REVEAL
+    ====================================================== */
+
+    function revealBirthday() {
+
+      if (birthdayAlreadyShown) {
+        return;
+      }
+
+
+      birthdayAlreadyShown = true;
+
+
+      document
+        .getElementById("waitingScreen")
+        .classList
+        .add("hidden");
+
+
+      document
+        .getElementById("birthdayScreen")
+        .classList
+        .remove("hidden");
+
+
+      launchConfetti();
+
+
+      /*
+        Scroll to top in case browser restored
+        an old scroll position.
+      */
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    }
+
+
+
+    /* ======================================================
+       PASSWORD
+
+       Correct password:
+       Manvik
+
+       It is case-insensitive:
+       Manvik
+       MANVIK
+       manvik
+       etc.
+    ====================================================== */
+
+    let wrongAttempts = 0;
+
+
+    function unlockGiftStory() {
+
+      const input =
+        document
+          .getElementById("passwordInput")
+          .value
+          .trim()
+          .toLowerCase();
+
+
+      const feedback =
+        document
+          .getElementById("passwordFeedback");
+
+
+      if (input === "manvik") {
+
+        feedback.innerHTML =
+
+          "🧸 <strong>Yesssss Madam! 😂❤️</strong>" +
+
+          "<br>Secret Vault Opened 🔓";
+
+
+        document
+          .getElementById("giftStorySection")
+          .classList
+          .remove("hidden");
+
+
+        /*
+          Remember on this device that
+          she has already unlocked it.
+        */
+
+        localStorage.setItem(
+          "sumaGiftStoryUnlocked",
+          "yes"
+        );
+
+
+        launchConfetti();
+
+
+        setTimeout(
+          function() {
+
+            document
+              .getElementById("giftStorySection")
+              .scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+              });
+
+          },
+          500
+        );
+
+
+        return;
+      }
+
+
+
+      /* WRONG PASSWORD */
+
+      wrongAttempts++;
+
+
+      if (wrongAttempts === 1) {
+
+        feedback.innerHTML =
+
+          "🧸 Nahi Suma ji… 😂" +
+
+          "<br>Thoda aur socho.";
+
+      }
+
+
+      else if (wrongAttempts === 2) {
+
+        feedback.innerHTML =
+
+          "🧸 Teddy password nahi batayega. 😌" +
+
+          "<br><strong>Guide Book yaad hai na? 👀</strong>";
+
+      }
+
+
+      else if (wrongAttempts === 3) {
+
+        feedback.innerHTML =
+
+          "😂 Madam ji, password guessing competition nahi hai!" +
+
+          "<br>Gifts ke paas answer hai. ❤️";
+
+      }
+
+
+      else {
+
+        feedback.innerHTML =
+
+          "🧸 Cheating allowed nahi hai Madam! 😂❤️" +
+
+          "<br>Guide Book ko properly dekho. 👀";
+
+      }
+
+    }
+
+
+
+    /* Press ENTER to unlock */
+
+    document
+      .getElementById("passwordInput")
+      .addEventListener(
+        "keydown",
+        function(event) {
+
+          if (event.key === "Enter") {
+
+            unlockGiftStory();
+
+          }
+
+        }
+      );
+
+
+
+    /* ======================================================
+       RESTORE GIFT STORY IF ALREADY UNLOCKED
+
+       This means if she closes the browser after
+       entering the correct password, the second
+       QR remains unlocked on the same browser/device.
+    ====================================================== */
+
+    function restoreGiftStory() {
+
+      const alreadyUnlocked =
+        localStorage.getItem(
+          "sumaGiftStoryUnlocked"
+        );
+
+
+      if (
+        alreadyUnlocked === "yes" &&
+        Date.now() >= BIRTHDAY_TIME
+      ) {
+
+        document
+          .getElementById("giftStorySection")
+          .classList
+          .remove("hidden");
+
+      }
+
+    }
+
+
+    restoreGiftStory();
+
+
+
+    /* ======================================================
+       CONFETTI
+    ====================================================== */
+
+    function launchConfetti() {
+
+      const symbols = [
+        "❤️",
+        "🎉",
+        "✨",
+        "🌸",
+        "💗",
+        "🎂"
+      ];
+
+
+      for (let i = 0; i < 60; i++) {
+
+        const piece =
+          document.createElement("div");
+
+
+        piece.className =
+          "confetti";
+
+
+        piece.textContent =
+          symbols[
+            Math.floor(
+              Math.random() *
+              symbols.length
+            )
+          ];
+
+
+        piece.style.left =
+          Math.random() * 100 + "vw";
+
+
+        piece.style.fontSize =
+          (
+            12 +
+            Math.random() * 18
+          )
+          + "px";
+
+
+        piece.style.animationDuration =
+          (
+            3 +
+            Math.random() * 4
+          )
+          + "s";
+
+
+        piece.style.animationDelay =
+          (
+            Math.random() * 1.4
+          )
+          + "s";
+
+
+        document.body.appendChild(
+          piece
+        );
+
+
+        setTimeout(
+          function() {
+
+            piece.remove();
+
+          },
+          8500
+        );
+
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
