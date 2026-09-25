@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>For Suma ❤️</title>
+  <title>Suma Birthday — Test ❤️</title>
 
   <style>
     * {
@@ -22,7 +22,12 @@
       font-family: "Trebuchet MS", Arial, sans-serif;
       color: #5f4850;
       background:
-        radial-gradient(circle at top, #fffafd 0%, #fdebf1 42%, #f8dce6 100%);
+        radial-gradient(
+          circle at top,
+          #fffafd 0%,
+          #fdebf1 42%,
+          #f8dce6 100%
+        );
       display: flex;
       justify-content: center;
       align-items: center;
@@ -32,12 +37,12 @@
 
     .main-card {
       width: min(94vw, 620px);
-      background: rgba(255, 255, 255, 0.91);
-      border: 1px solid rgba(180, 110, 135, 0.20);
+      background: rgba(255,255,255,0.93);
+      border: 1px solid rgba(180,110,135,0.20);
       border-radius: 30px;
       padding: 34px 22px;
       text-align: center;
-      box-shadow: 0 20px 60px rgba(120, 60, 80, 0.15);
+      box-shadow: 0 20px 60px rgba(120,60,80,0.15);
       backdrop-filter: blur(10px);
       position: relative;
       z-index: 2;
@@ -76,9 +81,26 @@
       display: none !important;
     }
 
-    /* -----------------------------
+    /* ================================
+       TEST MODE LABEL
+    ================================= */
+
+    .test-label {
+      display: inline-block;
+      background: #fff0f4;
+      color: #a65770;
+      border: 1px solid #e9c8d2;
+      border-radius: 50px;
+      padding: 7px 14px;
+      margin-bottom: 18px;
+      font-size: 0.72rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    /* ================================
        TEDDY
-    ----------------------------- */
+    ================================= */
 
     .teddy-area {
       min-height: 185px;
@@ -194,12 +216,14 @@
       font-size: 43px;
       left: 44px;
       bottom: 27px;
-      filter: drop-shadow(0 4px 5px rgba(100, 0, 30, 0.12));
+      filter: drop-shadow(
+        0 4px 5px rgba(100,0,30,0.12)
+      );
     }
 
-    /* -----------------------------
+    /* ================================
        COUNTDOWN
-    ----------------------------- */
+    ================================= */
 
     .countdown {
       display: grid;
@@ -247,9 +271,9 @@
       color: #a0868f;
     }
 
-    /* -----------------------------
-       BIRTHDAY REVEAL
-    ----------------------------- */
+    /* ================================
+       BIRTHDAY SCREEN
+    ================================= */
 
     .birthday-title {
       animation: birthdayPop 0.85s ease both;
@@ -276,9 +300,9 @@
       margin: 5px auto 20px;
     }
 
-    /* -----------------------------
+    /* ================================
        SURPRISE CARDS
-    ----------------------------- */
+    ================================= */
 
     .surprise-card {
       background: #ffffff;
@@ -286,7 +310,7 @@
       border-radius: 23px;
       padding: 22px 17px;
       margin-top: 22px;
-      box-shadow: 0 8px 25px rgba(100, 55, 70, 0.06);
+      box-shadow: 0 8px 25px rgba(100,55,70,0.06);
     }
 
     .surprise-icon {
@@ -298,9 +322,9 @@
       line-height: 1.7;
     }
 
-    /* -----------------------------
-       QR IMAGES
-    ----------------------------- */
+    /* ================================
+       QR
+    ================================= */
 
     .qr-frame {
       width: min(100%, 340px);
@@ -309,7 +333,7 @@
       background: white;
       border: 1px solid #edd6de;
       border-radius: 18px;
-      box-shadow: 0 10px 28px rgba(90, 45, 60, 0.12);
+      box-shadow: 0 10px 28px rgba(90,45,60,0.12);
     }
 
     .qr-image {
@@ -326,9 +350,9 @@
       line-height: 1.55;
     }
 
-    /* -----------------------------
-       BUTTONS
-    ----------------------------- */
+    /* ================================
+       BUTTON
+    ================================= */
 
     .button {
       display: inline-block;
@@ -344,7 +368,7 @@
       font-size: 0.96rem;
       font-weight: 700;
       cursor: pointer;
-      box-shadow: 0 8px 20px rgba(166, 87, 112, 0.20);
+      box-shadow: 0 8px 20px rgba(166,87,112,0.20);
       transition: 0.25s ease;
     }
 
@@ -359,9 +383,9 @@
       box-shadow: none;
     }
 
-    /* -----------------------------
-       PASSWORD VAULT
-    ----------------------------- */
+    /* ================================
+       PASSWORD
+    ================================= */
 
     .locked-card {
       margin-top: 25px;
@@ -395,7 +419,8 @@
 
     .password-input:focus {
       border-color: #a65770;
-      box-shadow: 0 0 0 3px rgba(166, 87, 112, 0.10);
+      box-shadow:
+        0 0 0 3px rgba(166,87,112,0.10);
     }
 
     .feedback {
@@ -406,9 +431,9 @@
       color: #9f5069;
     }
 
-    /* -----------------------------
+    /* ================================
        CONFETTI
-    ----------------------------- */
+    ================================= */
 
     .confetti {
       position: fixed;
@@ -420,7 +445,10 @@
 
     @keyframes confettiFall {
       to {
-        transform: translateY(115vh) rotate(720deg);
+        transform:
+          translateY(115vh)
+          rotate(720deg);
+
         opacity: 0.65;
       }
     }
@@ -433,6 +461,7 @@
     }
 
     @media (max-width: 430px) {
+
       body {
         padding: 10px;
       }
@@ -457,622 +486,746 @@
   </style>
 </head>
 
+
 <body>
 
-  <main class="main-card">
+<main class="main-card">
 
-    <!-- ======================================================
-         SCREEN 1 — COUNTDOWN
-    ======================================================= -->
+  <!-- ==========================================
+       WAITING / COUNTDOWN SCREEN
+  =========================================== -->
 
-    <section id="waitingScreen">
+  <section id="waitingScreen">
 
-      <div class="eyebrow">
-        A little something is waiting
+    <div class="test-label">
+      🧪 TEST MODE — 10 SECOND COUNTDOWN
+    </div>
+
+    <div class="eyebrow">
+      A little something is waiting
+    </div>
+
+    <h1>
+      For Suma ❤️
+    </h1>
+
+    <p class="subtitle">
+
+      Betu… abhi nahi 😌
+
+      <br><br>
+
+      Teddy ko strict instructions mile hain ki
+      surprise thoda wait karke hi reveal karna hai.
+
+      <br><br>
+
+      Toh Teddy ke saath bas
+      <strong>10 seconds wait karo… ❤️</strong>
+
+    </p>
+
+
+    <!-- TEDDY -->
+
+    <div class="teddy-area">
+
+      <div class="teddy">
+
+        <div class="ear left"></div>
+        <div class="ear right"></div>
+
+        <div class="teddy-head">
+
+          <div class="eye left"></div>
+          <div class="eye right"></div>
+
+          <div class="muzzle">
+            <div class="nose"></div>
+          </div>
+
+        </div>
+
+        <div class="teddy-body"></div>
+
+        <div class="teddy-heart">
+          ❤️
+        </div>
+
       </div>
 
-      <h1>For Suma ❤️</h1>
+    </div>
 
-      <p class="subtitle">
-        Betu… abhi nahi 😌
+
+    <!-- COUNTDOWN -->
+
+    <div class="countdown">
+
+      <div class="time-box">
+        <span
+          id="days"
+          class="time-number"
+        >00</span>
+
+        <span class="time-label">
+          Days
+        </span>
+      </div>
+
+
+      <div class="time-box">
+        <span
+          id="hours"
+          class="time-number"
+        >00</span>
+
+        <span class="time-label">
+          Hours
+        </span>
+      </div>
+
+
+      <div class="time-box">
+        <span
+          id="minutes"
+          class="time-number"
+        >00</span>
+
+        <span class="time-label">
+          Minutes
+        </span>
+      </div>
+
+
+      <div class="time-box">
+        <span
+          id="seconds"
+          class="time-number"
+        >10</span>
+
+        <span class="time-label">
+          Seconds
+        </span>
+      </div>
+
+    </div>
+
+
+    <div
+      id="teddyMessage"
+      class="teddy-message"
+    >
+
+      🧸 Teddy says:
+
+      <br><br>
+
+      <strong>
+        “Suma… ab kahin jaana nahi! 😂❤️”
+      </strong>
+
+      <br>
+
+      Something is almost here… 👀
+
+    </div>
+
+
+    <div class="waiting-note">
+      TEST MODE • Surprise opens in 10 seconds
+    </div>
+
+  </section>
+
+
+
+  <!-- ==========================================
+       HAPPY BIRTHDAY SCREEN
+  =========================================== -->
+
+  <section
+    id="birthdayScreen"
+    class="hidden"
+  >
+
+    <div class="eyebrow">
+      Finallyyyyy…
+    </div>
+
+
+    <h1 class="birthday-title">
+      Happy Birthday
+      <br>
+      Suma! 🎂❤️
+    </h1>
+
+
+    <!-- HAPPY TEDDY -->
+
+    <div class="teddy-area">
+
+      <div class="teddy">
+
+        <div class="ear left"></div>
+        <div class="ear right"></div>
+
+        <div class="teddy-head">
+
+          <div class="eye left"></div>
+          <div class="eye right"></div>
+
+          <div class="muzzle">
+            <div class="nose"></div>
+          </div>
+
+        </div>
+
+        <div class="teddy-body"></div>
+
+        <div class="teddy-heart">
+          🎉
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <p class="birthday-message">
+
+      <strong>
+        Happy Birthday meri Suma ❤️
+      </strong>
+
+      <br><br>
+
+      Bas… Teddy ka wait officially
+      khatam. 😌😂
+
+      <br><br>
+
+      Ab jo aage hai,
+      woh sirf ek webpage nahi hai.
+
+      <br><br>
+
+      <strong>
+        Aaj ka din thoda aur special
+        banane ki meri chhoti si
+        koshish hai. ❤️
+      </strong>
+
+    </p>
+
+
+
+    <!-- ======================================
+         SURPRISE 1
+    ======================================= -->
+
+    <div class="surprise-card">
+
+      <div class="surprise-icon">
+        🎁
+      </div>
+
+      <h2>
+        Surprise #1
+      </h2>
+
+      <p>
+
+        <strong>
+          For my Birthday Girl ❤️
+        </strong>
+
         <br><br>
-        Teddy ko strict instructions mile hain ki
-        <strong>26 September se pehle kuch reveal nahi karna.</strong>
-        <br><br>
-        Toh ab Teddy ke saath thoda sa wait karo… ❤️
+
+        Suma, birthday ki kahani
+        yahan se shuru hoti hai…
+
       </p>
 
-      <div class="teddy-area">
 
-        <div class="teddy">
+      <div class="qr-frame">
 
-          <div class="ear left"></div>
-          <div class="ear right"></div>
-
-          <div class="teddy-head">
-
-            <div class="eye left"></div>
-            <div class="eye right"></div>
-
-            <div class="muzzle">
-              <div class="nose"></div>
-            </div>
-
-          </div>
-
-          <div class="teddy-body"></div>
-
-          <div class="teddy-heart">
-            ❤️
-          </div>
-
-        </div>
+        <img
+          src="sushma-birthday-cake-qr.png"
+          alt="Sushma Birthday Surprise QR"
+          class="qr-image"
+        >
 
       </div>
 
 
-      <div class="countdown">
+      <p class="scan-note">
 
-        <div class="time-box">
-          <span id="days" class="time-number">00</span>
-          <span class="time-label">Days</span>
-        </div>
+        📱 Agar QR scan karna ho
+        toh scan karo…
 
-        <div class="time-box">
-          <span id="hours" class="time-number">00</span>
-          <span class="time-label">Hours</span>
-        </div>
+        <br>
 
-        <div class="time-box">
-          <span id="minutes" class="time-number">00</span>
-          <span class="time-label">Minutes</span>
-        </div>
+        ya agar isi phone par ho,
+        neeche button dabao. ❤️
 
-        <div class="time-box">
-          <span id="seconds" class="time-number">00</span>
-          <span class="time-label">Seconds</span>
-        </div>
+      </p>
 
+
+      <a
+        href="index.html"
+        class="button"
+      >
+        ❤️ Open My Birthday Surprise
+      </a>
+
+    </div>
+
+
+
+    <!-- ======================================
+         SECRET GIFT STORY
+    ======================================= -->
+
+    <div class="locked-card">
+
+      <div class="lock-icon">
+        🔐
       </div>
 
-
-      <div id="teddyMessage" class="teddy-message">
-
-        🧸 Teddy says:
-        <br><br>
-
-        <strong>
-          “Main bhi wait kar raha hoon Suma…
-          cheating bilkul nahi! 😌❤️”
-        </strong>
-
-      </div>
+      <h2>
+        Ruko Suma ji… 👀
+      </h2>
 
 
-      <div class="waiting-note">
-        26 September 2026 • 12:00 AM IST
-      </div>
+      <p>
 
-    </section>
-
-
-
-    <!-- ======================================================
-         SCREEN 2 — BIRTHDAY
-    ======================================================= -->
-
-    <section id="birthdayScreen" class="hidden">
-
-      <div class="eyebrow">
-        Finallyyyyy…
-      </div>
-
-      <h1 class="birthday-title">
-        Happy Birthday<br>
-        Suma! 🎂❤️
-      </h1>
-
-
-      <div class="teddy-area">
-
-        <div class="teddy">
-
-          <div class="ear left"></div>
-          <div class="ear right"></div>
-
-          <div class="teddy-head">
-
-            <div class="eye left"></div>
-            <div class="eye right"></div>
-
-            <div class="muzzle">
-              <div class="nose"></div>
-            </div>
-
-          </div>
-
-          <div class="teddy-body"></div>
-
-          <div class="teddy-heart">
-            🎉
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <p class="birthday-message">
-
-        <strong>
-          Happy Birthday meri Suma ❤️
-        </strong>
+        Abhi ek aur surprise
+        baaki hai. 😌
 
         <br><br>
 
-        Bas… Teddy ka wait officially khatam. 😌😂
-
-        <br><br>
-
-        Ab jo aage hai,
-        woh sirf ek webpage nahi hai.
+        Ye hai…
 
         <br>
 
         <strong>
-          Aaj ka din thoda aur special banane ki
-          meri chhoti si koshish hai. ❤️
+          Suma's Gift Story 🎁❤️
+        </strong>
+
+        <br><br>
+
+        Lekin ye wala thoda secret hai.
+
+        <br><br>
+
+        Password main yahan
+        nahi bataunga. 😂
+
+        <br><br>
+
+        <strong>
+          Gifts aur Guide Book ko
+          dhyaan se dekhna…
+
+          <br>
+
+          password wahin tumhara
+          wait kar raha hai. 👀
         </strong>
 
       </p>
 
 
-
-      <!-- ====================================================
-           SURPRISE #1 — BIRTHDAY QR
-      ===================================================== -->
-
-      <div class="surprise-card">
-
-        <div class="surprise-icon">
-          🎁
-        </div>
-
-        <h2>
-          Surprise #1
-        </h2>
-
-        <p>
-          <strong>For my Birthday Girl ❤️</strong>
-          <br><br>
-
-          Suma, birthday ki kahani
-          yahan se shuru hoti hai…
-        </p>
-
-
-        <div class="qr-frame">
-
-          <img
-            src="sushma-birthday-cake-qr.png"
-            alt="Sushma Birthday Surprise QR"
-            class="qr-image"
-          >
-
-        </div>
-
-
-        <p class="scan-note">
-
-          📱 Agar QR scan karna ho toh scan karo…
-          <br>
-
-          ya agar isi phone par ho,
-          neeche button dabao. ❤️
-
-        </p>
-
-
-        <!--
-          index.html = your existing main birthday webpage
-        -->
-
-        <a
-          href="index.html"
-          class="button"
-        >
-          ❤️ Open My Birthday Surprise
-        </a>
-
-      </div>
-
-
-
-      <!-- ====================================================
-           PASSWORD-PROTECTED SURPRISE
-      ===================================================== -->
-
-      <div class="locked-card">
-
-        <div class="lock-icon">
-          🔐
-        </div>
-
-        <h2>
-          Ruko Suma ji… 👀
-        </h2>
-
-
-        <p>
-
-          Abhi ek aur surprise baaki hai. 😌
-
-          <br><br>
-
-          Ye hai…
-
-          <br>
-
-          <strong>
-            Suma's Gift Story 🎁❤️
-          </strong>
-
-          <br><br>
-
-          Lekin ye wala thoda secret hai.
-
-          <br><br>
-
-          Password main yahan nahi bataunga. 😂
-
-          <br>
-
-          <strong>
-            Gifts aur Guide Book ko dhyaan se dekhna…
-            password wahin tumhara wait kar raha hai. 👀
-          </strong>
-
-        </p>
-
-
-        <input
-          id="passwordInput"
-          class="password-input"
-          type="password"
-          placeholder="Enter secret password 👀"
-          autocomplete="off"
-        >
-
-
-        <button
-          class="button secondary"
-          onclick="unlockGiftStory()"
-        >
-          Unlock My Gift Story 🔐
-        </button>
-
-
-        <div
-          id="passwordFeedback"
-          class="feedback"
-        ></div>
-
-      </div>
-
-
-
-      <!-- ====================================================
-           SURPRISE #2 — GIFT STORY QR
-      ===================================================== -->
-
-      <div
-        id="giftStorySection"
-        class="surprise-card hidden"
+      <input
+        id="passwordInput"
+        class="password-input"
+        type="password"
+        placeholder="Enter secret password 👀"
+        autocomplete="off"
       >
 
-        <div class="surprise-icon">
-          🔓❤️
-        </div>
+
+      <button
+        class="button secondary"
+        onclick="unlockGiftStory()"
+      >
+        Unlock My Gift Story 🔐
+      </button>
 
 
-        <h2>
-          Suma's Gift Story
-        </h2>
+      <div
+        id="passwordFeedback"
+        class="feedback"
+      ></div>
+
+    </div>
 
 
-        <p>
 
-          Yesssss! 😂❤️
+    <!-- ======================================
+         GIFT STORY — HIDDEN INITIALLY
+    ======================================= -->
 
-          <br><br>
+    <div
+      id="giftStorySection"
+      class="surprise-card hidden"
+    >
 
-          <strong>
-            Secret Vault Opened.
-          </strong>
-
-          <br><br>
-
-          Ab ek baat yaad rakhna…
-
-          <br><br>
-
-          Har gift bas ek gift nahi hai.
-
-          <br>
-
-          <strong>
-            Har ek ke peeche ek chhota sa thought,
-            ek reason aur thoda sa care hai. ❤️
-          </strong>
-
-          <br><br>
-
-          Aur unhi sab ki kahani
-          is QR ke peeche hai.
-
-        </p>
-
-
-        <div class="qr-frame">
-
-          <img
-            src="Gift_QR.jpg"
-            alt="Suma Gift Story QR"
-            class="qr-image"
-          >
-
-        </div>
-
-
-        <p class="scan-note">
-
-          🎁 Scan the QR
-          <br>
-
-          ya isi phone par ho toh neeche se directly kholo. ❤️
-
-        </p>
-
-
-        <!--
-          gift-story.html = your existing gift story page
-        -->
-
-        <a
-          href="gift-story.html"
-          class="button"
-        >
-          🎁 Open Suma's Gift Story
-        </a>
-
+      <div class="surprise-icon">
+        🔓❤️
       </div>
 
 
+      <h2>
+        Suma's Gift Story
+      </h2>
 
-      <div class="footer">
 
-        Made with lots of excitement,
-        <br>
+      <p>
 
-        thoda sa pagalpan 😂
-        <br>
-
-        aur bahut saara pyaar ❤️
+        Yesssss! 😂❤️
 
         <br><br>
 
-        — Ayush
+        <strong>
+          Secret Vault Opened.
+        </strong>
+
+        <br><br>
+
+        Ab ek baat yaad rakhna…
+
+        <br><br>
+
+        Har gift bas ek gift nahi hai.
+
+        <br><br>
+
+        <strong>
+          Har ek ke peeche ek
+          chhota sa thought,
+          ek reason aur
+          thoda sa care hai. ❤️
+        </strong>
+
+        <br><br>
+
+        Aur unhi sab ki kahani
+        is QR ke peeche hai.
+
+      </p>
+
+
+      <div class="qr-frame">
+
+        <img
+          src="Gift_QR.jpg"
+          alt="Suma Gift Story QR"
+          class="qr-image"
+        >
 
       </div>
 
-    </section>
 
-  </main>
+      <p class="scan-note">
 
+        🎁 Scan the QR
 
+        <br>
 
-  <script>
+        ya isi phone par ho toh
+        neeche se directly kholo. ❤️
 
-    /* ======================================================
-       BIRTHDAY DATE
-
-       26 SEPTEMBER 2026
-       12:00 AM INDIA STANDARD TIME
-
-       +05:30 ensures the intended Indian time.
-    ====================================================== */
-
-    const BIRTHDAY_TIME = Date.now() - 1000;
+      </p>
 
 
-    let birthdayAlreadyShown = false;
+      <a
+        href="gift-story.html"
+        class="button"
+      >
+        🎁 Open Suma's Gift Story
+      </a>
+
+    </div>
 
 
 
-    /* ======================================================
-       COUNTDOWN
-    ====================================================== */
+    <div class="footer">
 
-    function updateCountdown() {
+      Made with lots of excitement,
 
-      const now = Date.now();
+      <br>
 
-      const distance =
-        BIRTHDAY_TIME - now;
+      thoda sa pagalpan 😂
 
+      <br>
 
-      /* Birthday reached */
+      aur bahut saara pyaar ❤️
 
-      if (distance <= 0) {
+      <br><br>
 
-        document.getElementById("days").textContent = "00";
-        document.getElementById("hours").textContent = "00";
-        document.getElementById("minutes").textContent = "00";
-        document.getElementById("seconds").textContent = "00";
+      — Ayush
 
-        revealBirthday();
+    </div>
 
-        return;
-      }
+  </section>
+
+</main>
 
 
-      const days =
-        Math.floor(
-          distance /
+
+<script>
+
+  /* ==========================================
+     TEST MODE
+
+     Every page refresh creates a NEW
+     10-second countdown.
+
+     This is intentionally different from
+     birthday-countdown.html.
+  ========================================== */
+
+  const BIRTHDAY_TIME =
+    Date.now() + 10000;
+
+
+  let birthdayAlreadyShown = false;
+
+  let countdownInterval;
+
+
+
+  /* ==========================================
+     COUNTDOWN
+  ========================================== */
+
+  function updateCountdown() {
+
+    const now = Date.now();
+
+    const distance =
+      BIRTHDAY_TIME - now;
+
+
+    /* Birthday reached */
+
+    if (distance <= 0) {
+
+      document
+        .getElementById("days")
+        .textContent = "00";
+
+      document
+        .getElementById("hours")
+        .textContent = "00";
+
+      document
+        .getElementById("minutes")
+        .textContent = "00";
+
+      document
+        .getElementById("seconds")
+        .textContent = "00";
+
+
+      clearInterval(countdownInterval);
+
+      revealBirthday();
+
+      return;
+    }
+
+
+    const days =
+      Math.floor(
+        distance /
+        (1000 * 60 * 60 * 24)
+      );
+
+
+    const hours =
+      Math.floor(
+        (
+          distance %
           (1000 * 60 * 60 * 24)
-        );
+        ) /
+        (1000 * 60 * 60)
+      );
 
 
-      const hours =
-        Math.floor(
-          (
-            distance %
-            (1000 * 60 * 60 * 24)
-          )
-          /
+    const minutes =
+      Math.floor(
+        (
+          distance %
           (1000 * 60 * 60)
-        );
+        ) /
+        (1000 * 60)
+      );
 
 
-      const minutes =
-        Math.floor(
-          (
-            distance %
-            (1000 * 60 * 60)
-          )
-          /
+    /*
+      Math.ceil is intentional here.
+
+      It makes the test visually show:
+      10, 9, 8 ... 1
+      instead of appearing to start at 9.
+    */
+
+    const seconds =
+      Math.ceil(
+        (
+          distance %
           (1000 * 60)
-        );
+        ) /
+        1000
+      );
 
 
-      const seconds =
-        Math.floor(
-          (
-            distance %
-            (1000 * 60)
-          )
-          /
-          1000
-        );
-
-
-      document.getElementById("days").textContent =
+    document
+      .getElementById("days")
+      .textContent =
         String(days).padStart(2, "0");
 
 
-      document.getElementById("hours").textContent =
+    document
+      .getElementById("hours")
+      .textContent =
         String(hours).padStart(2, "0");
 
 
-      document.getElementById("minutes").textContent =
+    document
+      .getElementById("minutes")
+      .textContent =
         String(minutes).padStart(2, "0");
 
 
-      document.getElementById("seconds").textContent =
+    document
+      .getElementById("seconds")
+      .textContent =
         String(seconds).padStart(2, "0");
 
 
 
-      /* ------------------------------------------
-         SPECIAL MESSAGES AS MIDNIGHT APPROACHES
-      ------------------------------------------- */
+    /* Teddy's final countdown */
 
-      const teddyMessage =
-        document.getElementById("teddyMessage");
-
-
-      /* Less than 1 hour */
-
-      if (distance <= 60 * 60 * 1000) {
-
-        teddyMessage.innerHTML =
-
-          "🧸 Teddy says:<br><br>" +
-
-          "<strong>" +
-          "Bas thoda sa aur Suma… 👀❤️" +
-          "</strong><br>" +
-
-          "Ab Teddy bhi excited ho raha hai. 😂";
-
-      }
+    const teddyMessage =
+      document.getElementById(
+        "teddyMessage"
+      );
 
 
-      /* Less than 5 minutes */
+    if (distance <= 10000) {
 
-      if (distance <= 5 * 60 * 1000) {
+      teddyMessage.innerHTML =
 
-        teddyMessage.innerHTML =
+        "🧸 Teddy says:<br><br>" +
 
-          "🧸 Teddy says:<br><br>" +
+        "<strong style='font-size:1.3rem'>" +
 
-          "<strong>" +
-          "Suma… ab kahin jaana nahi! 😂❤️" +
-          "</strong><br>" +
+        seconds +
 
-          "Something is almost here… 👀";
+        "… ❤️" +
 
-      }
+        "</strong><br>" +
 
-
-      /* Last 10 seconds */
-
-      if (distance <= 10000) {
-
-        teddyMessage.innerHTML =
-
-          "🧸 Teddy says:<br><br>" +
-
-          "<strong style='font-size:1.3rem'>" +
-
-          seconds +
-
-          "… ❤️" +
-
-          "</strong><br>" +
-
-          "Bas bas bas… aa gaya! 👀🎂";
-
-      }
-
+        "Bas bas bas… aa gaya! 👀🎂";
     }
 
+  }
 
 
-    /* Run every second */
 
+  /* Run immediately */
+
+  updateCountdown();
+
+
+  /* Then update frequently for smoother timing */
+
+  countdownInterval =
     setInterval(
       updateCountdown,
-      1000
+      250
     );
 
 
-    updateCountdown();
+
+  /* ==========================================
+     REVEAL BIRTHDAY
+  ========================================== */
+
+  function revealBirthday() {
+
+    if (birthdayAlreadyShown) {
+      return;
+    }
+
+
+    birthdayAlreadyShown = true;
+
+
+    document
+      .getElementById("waitingScreen")
+      .classList
+      .add("hidden");
+
+
+    document
+      .getElementById("birthdayScreen")
+      .classList
+      .remove("hidden");
+
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+
+    launchConfetti();
+
+  }
 
 
 
-    /* ======================================================
-       BIRTHDAY REVEAL
-    ====================================================== */
+  /* ==========================================
+     PASSWORD
+  ========================================== */
 
-    function revealBirthday() {
-
-      if (birthdayAlreadyShown) {
-        return;
-      }
+  let wrongAttempts = 0;
 
 
-      birthdayAlreadyShown = true;
+  function unlockGiftStory() {
+
+    const input =
+      document
+        .getElementById("passwordInput")
+        .value
+        .trim()
+        .toLowerCase();
+
+
+    const feedback =
+      document
+        .getElementById(
+          "passwordFeedback"
+        );
+
+
+    if (input === "manvik") {
+
+      feedback.innerHTML =
+
+        "🧸 <strong>Yesssss Madam! 😂❤️</strong>" +
+
+        "<br>Secret Vault Opened 🔓";
 
 
       document
-        .getElementById("waitingScreen")
-        .classList
-        .add("hidden");
-
-
-      document
-        .getElementById("birthdayScreen")
+        .getElementById(
+          "giftStorySection"
+        )
         .classList
         .remove("hidden");
 
@@ -1080,287 +1233,174 @@
       launchConfetti();
 
 
-      /*
-        Scroll to top in case browser restored
-        an old scroll position.
-      */
-
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-
-    }
-
-
-
-    /* ======================================================
-       PASSWORD
-
-       Correct password:
-       Manvik
-
-       It is case-insensitive:
-       Manvik
-       MANVIK
-       manvik
-       etc.
-    ====================================================== */
-
-    let wrongAttempts = 0;
-
-
-    function unlockGiftStory() {
-
-      const input =
-        document
-          .getElementById("passwordInput")
-          .value
-          .trim()
-          .toLowerCase();
-
-
-      const feedback =
-        document
-          .getElementById("passwordFeedback");
-
-
-      if (input === "manvik") {
-
-        feedback.innerHTML =
-
-          "🧸 <strong>Yesssss Madam! 😂❤️</strong>" +
-
-          "<br>Secret Vault Opened 🔓";
-
-
-        document
-          .getElementById("giftStorySection")
-          .classList
-          .remove("hidden");
-
-
-        /*
-          Remember on this device that
-          she has already unlocked it.
-        */
-
-        localStorage.setItem(
-          "sumaGiftStoryUnlocked",
-          "yes"
-        );
-
-
-        launchConfetti();
-
-
-        setTimeout(
-          function() {
-
-            document
-              .getElementById("giftStorySection")
-              .scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-              });
-
-          },
-          500
-        );
-
-
-        return;
-      }
-
-
-
-      /* WRONG PASSWORD */
-
-      wrongAttempts++;
-
-
-      if (wrongAttempts === 1) {
-
-        feedback.innerHTML =
-
-          "🧸 Nahi Suma ji… 😂" +
-
-          "<br>Thoda aur socho.";
-
-      }
-
-
-      else if (wrongAttempts === 2) {
-
-        feedback.innerHTML =
-
-          "🧸 Teddy password nahi batayega. 😌" +
-
-          "<br><strong>Guide Book yaad hai na? 👀</strong>";
-
-      }
-
-
-      else if (wrongAttempts === 3) {
-
-        feedback.innerHTML =
-
-          "😂 Madam ji, password guessing competition nahi hai!" +
-
-          "<br>Gifts ke paas answer hai. ❤️";
-
-      }
-
-
-      else {
-
-        feedback.innerHTML =
-
-          "🧸 Cheating allowed nahi hai Madam! 😂❤️" +
-
-          "<br>Guide Book ko properly dekho. 👀";
-
-      }
-
-    }
-
-
-
-    /* Press ENTER to unlock */
-
-    document
-      .getElementById("passwordInput")
-      .addEventListener(
-        "keydown",
-        function(event) {
-
-          if (event.key === "Enter") {
-
-            unlockGiftStory();
-
-          }
-
-        }
+      setTimeout(
+        function() {
+
+          document
+            .getElementById(
+              "giftStorySection"
+            )
+            .scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
+
+        },
+        500
       );
 
 
-
-    /* ======================================================
-       RESTORE GIFT STORY IF ALREADY UNLOCKED
-
-       This means if she closes the browser after
-       entering the correct password, the second
-       QR remains unlocked on the same browser/device.
-    ====================================================== */
-
-    function restoreGiftStory() {
-
-      const alreadyUnlocked =
-        localStorage.getItem(
-          "sumaGiftStoryUnlocked"
-        );
-
-
-      if (
-        alreadyUnlocked === "yes" &&
-        Date.now() >= BIRTHDAY_TIME
-      ) {
-
-        document
-          .getElementById("giftStorySection")
-          .classList
-          .remove("hidden");
-
-      }
-
+      return;
     }
 
 
-    restoreGiftStory();
+
+    /* WRONG PASSWORD */
+
+    wrongAttempts++;
 
 
+    if (wrongAttempts === 1) {
 
-    /* ======================================================
-       CONFETTI
-    ====================================================== */
+      feedback.innerHTML =
 
-    function launchConfetti() {
+        "🧸 Nahi Suma ji… 😂" +
 
-      const symbols = [
-        "❤️",
-        "🎉",
-        "✨",
-        "🌸",
-        "💗",
-        "🎂"
-      ];
-
-
-      for (let i = 0; i < 60; i++) {
-
-        const piece =
-          document.createElement("div");
-
-
-        piece.className =
-          "confetti";
-
-
-        piece.textContent =
-          symbols[
-            Math.floor(
-              Math.random() *
-              symbols.length
-            )
-          ];
-
-
-        piece.style.left =
-          Math.random() * 100 + "vw";
-
-
-        piece.style.fontSize =
-          (
-            12 +
-            Math.random() * 18
-          )
-          + "px";
-
-
-        piece.style.animationDuration =
-          (
-            3 +
-            Math.random() * 4
-          )
-          + "s";
-
-
-        piece.style.animationDelay =
-          (
-            Math.random() * 1.4
-          )
-          + "s";
-
-
-        document.body.appendChild(
-          piece
-        );
-
-
-        setTimeout(
-          function() {
-
-            piece.remove();
-
-          },
-          8500
-        );
-
-      }
+        "<br>Thoda aur socho.";
 
     }
 
-  </script>
+    else if (wrongAttempts === 2) {
+
+      feedback.innerHTML =
+
+        "🧸 Teddy password nahi batayega. 😌" +
+
+        "<br><strong>Guide Book yaad hai na? 👀</strong>";
+
+    }
+
+    else if (wrongAttempts === 3) {
+
+      feedback.innerHTML =
+
+        "😂 Madam ji, password guessing competition nahi hai!" +
+
+        "<br>Gifts ke paas answer hai. ❤️";
+
+    }
+
+    else {
+
+      feedback.innerHTML =
+
+        "🧸 Cheating allowed nahi hai Madam! 😂❤️" +
+
+        "<br>Guide Book ko properly dekho. 👀";
+
+    }
+
+  }
+
+
+
+  /* ENTER KEY */
+
+  document
+    .getElementById("passwordInput")
+    .addEventListener(
+      "keydown",
+      function(event) {
+
+        if (event.key === "Enter") {
+
+          unlockGiftStory();
+
+        }
+
+      }
+    );
+
+
+
+  /* ==========================================
+     CONFETTI
+  ========================================== */
+
+  function launchConfetti() {
+
+    const symbols = [
+      "❤️",
+      "🎉",
+      "✨",
+      "🌸",
+      "💗",
+      "🎂"
+    ];
+
+
+    for (let i = 0; i < 65; i++) {
+
+      const piece =
+        document.createElement("div");
+
+
+      piece.className =
+        "confetti";
+
+
+      piece.textContent =
+        symbols[
+          Math.floor(
+            Math.random() *
+            symbols.length
+          )
+        ];
+
+
+      piece.style.left =
+        Math.random() * 100 + "vw";
+
+
+      piece.style.fontSize =
+        (
+          12 +
+          Math.random() * 18
+        ) + "px";
+
+
+      piece.style.animationDuration =
+        (
+          3 +
+          Math.random() * 4
+        ) + "s";
+
+
+      piece.style.animationDelay =
+        (
+          Math.random() * 1.2
+        ) + "s";
+
+
+      document.body.appendChild(
+        piece
+      );
+
+
+      setTimeout(
+        function() {
+
+          piece.remove();
+
+        },
+        8500
+      );
+
+    }
+
+  }
+
+</script>
 
 </body>
 </html>
